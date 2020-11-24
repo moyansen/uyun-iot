@@ -33,9 +33,9 @@
 * [4G网络模块](uartlink/4g.md)
 * [WiFi网络模块](uartlink/wifi.md)
 
-## Uartloud IoT平台 <a id="platform"></a>
+## 物联云平台 <a id="platform"></a>
 
-* [产品介绍](platform/introduce.md)
+* [Uartloud产品介绍](platform/introduce.md)
 * [快速入门](platform/quickguide.md)
 * [控制台用户指南](platform/consoleguide/README.md)
   * [终端管理](platform/consoleguide/terminal.md)
