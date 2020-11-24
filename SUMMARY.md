@@ -30,8 +30,9 @@
 ## 智能模块 <a id="uartlink"></a>
 
 * [产品介绍](uartlink/introduce.md)
-* [4G网络模块](uartlink/4g.md)
-* [WiFi网络模块](uartlink/wifi.md)
+* [UartLink用户指南](uartlink/uartlink/README.md)
+  * [4G网络模块](uartlink/uartlink/4g.md)
+  * [WiFi网络模块](uartlink/uartlink/wifi.md)
 
 ## 物联云平台 <a id="platform"></a>
 
