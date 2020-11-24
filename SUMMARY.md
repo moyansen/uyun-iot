@@ -6,7 +6,7 @@
 
 ## 智能屏 <a id="terminal"></a>
 
-* [产品线介绍](terminal/introduce.md)
+* [产品介绍](terminal/introduce.md)
 * [IoTgus用户指南](terminal/iotgus/README.md)
   * [串口通信说明](terminal/iotgus/uart.md)
   * [系统配置说明](terminal/iotgus/syscfg.md)
@@ -29,7 +29,7 @@
 
 ## 智能模块 <a id="uartlink"></a>
 
-* [产品线介绍](uartlink/introduce.md)
+* [产品介绍](uartlink/introduce.md)
 * [4G网络模块](uartlink/4g.md)
 * [WiFi网络模块](uartlink/wifi.md)
 
