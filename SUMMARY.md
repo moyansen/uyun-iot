@@ -43,7 +43,7 @@
   * [数据管理](platform/consoleguide/data.md)
   * [应用管理](platform/consoleguide/application.md)
 * [设备开发指南](platform/devicedev.md)
-* [云端开发指南](platform/clouddev.md)
+* [云端对接指南](platform/clouddev.md)
 
 ## 应用可视化开发平台 <a id="visualboard"></a>
 
