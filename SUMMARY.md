@@ -35,7 +35,7 @@
 
 ## 物联云平台 <a id="platform"></a>
 
-* [Uartcloud产品介绍](platform/introduce.md)
+* [UartCloud产品介绍](platform/introduce.md)
 * [快速入门](platform/quickguide.md)
 * [控制台用户指南](platform/consoleguide/README.md)
   * [终端管理](platform/consoleguide/terminal.md)
