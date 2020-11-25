@@ -10,7 +10,7 @@
 * [IoTgus用户指南](terminal/iotgus/README.md)
   * [串口通信说明](terminal/iotgus/uart.md)
   * [系统配置说明](terminal/iotgus/syscfg.md)
-  * [寄存器与变量空间说明](terminal/iotgus/regvar/README.md)
+  * [系统交互说明](terminal/iotgus/regvar/README.md)
     * [寄存器功能描述](terminal/iotgus/regvar/register.md)
   * [开发准备说明](terminal/iotgus/devready.md)
   * [开发配置说明](terminal/iotgus/devcfg/README.md)
