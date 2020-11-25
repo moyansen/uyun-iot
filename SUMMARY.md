@@ -20,7 +20,6 @@
       * [图形显示功能](terminal/iotgus/devcfg/uartosdisplay/graph.md)
     * [触控控件说明](terminal/iotgus/devcfg/uartostouch.md)
     * [网络配置说明](terminal/iotgus/devcfg/netconfig.md)
-    * [二次开发说明](terminal/iotgus/devcfg/secdev.md)
   * [附录](terminal/iotgus/uartosacc.md)
 * [柿饼派用户指南](terminal/persimmonui.md)
 * [UartOS用户指南](terminal/uartos.md)

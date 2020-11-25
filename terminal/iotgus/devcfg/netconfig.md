@@ -4,72 +4,167 @@ description: IoT串口开发使用文档
 
 # 网络配置说明
 
-## 1、网络功能配置
+## 触控相关配置
 
-网络功能参数配置，也是分为两部分：**网络参数配置**和**设备信息配置**。网络参数配置是实现IoT串口屏接入WiFi或者移动网络；设备信息配置是实现IoT串口屏接入物联网云平台，IoT云平台对每个设备都需要有唯一的认证信息，通过后才能接入云平台。
+变量地址0x8000作为网络操作功能，不同的值对应不同的功能
 
-IoT串口屏划分了一分部变量地址用于网络功能参数配置，从0x8000开始地址是系统占用地址，用户在配置GUS工程时需要避开，以免出现冲突而带来的不必要的麻烦。
+高字节为0x00平台接入相关，高字节为0x01网络相关，高字节为0x02数据通信相关。
 
-这部分地址的功能已经定义好，参数也有部分是规定对应不同的功能，只需要按照功能配置即可。
+| **功能模块** | **说明** |
+| :--- | :--- |
+|  0x0001 | 确认接入注册 |
+| 0x0101-0x0108 | 选择WiFi热点 |
+| 0x0109 | 搜索热点 |
+| 0x010A | 接入热点模式 |
+| 0x010B | 查询网模块信息 |
+| 0x010C | 获取WiFi信息状态 |
+| 0x0200 | 使能下载文件 |
 
-| **变量地址** |  **长度** | **功能定义** | **备注** |
+## 查看网络状态
+
+用于串口屏间隔5秒读取模块网络运行状态。显示设备的信号强度、接入平台提示、IP地址、接入的平台、运行时间。
+
+| **功能** | **变量地址** | **长度** | **说明** |
 | :--- | :--- | :--- | :--- |
-| 0x8000 | 2字节 | 信号强度 | WIFI/移动网络信号强度：0-5 |
-| 0x8001 | 2字节 | 平台接入提示 | 0：未接入云平台，1：已接入云平台 |
-| 0x8003 | 2字节 | 搜索WiFi热点 | 0x5A02：搜索WiFi热点 0xC33C：设置接入WiFi 0x5B01-0x5B08：8个待选附近WiFi热点 0xC33D：接入云平台 |
-| 0x8010 | 32字节 | 输入WiFi名称 | 手动写的WiFi名称或者选择的WiFi名称 |
-| 0x8030 | 32字节 | 输入WiFi密码 | 录入WiFi密码 |
-| 0x8100 | 32字节 | 附近的WiFi名称1 | 对应0x8003的键值0x5B01 |
-| 0x8120 | 32字节 | 附近的WiFi名称2 | 对应0x8003的键值0x5B0**2** |
-| 0x8140 | 32字节 | 附近的WiFi名称3 | 对应0x8003的键值0x5B03 |
-| 0x8160 | 32字节 | 附近的WiFi名称4 | 对应0x8003的键值0x5B04 |
-| 0x8180 | 32字节 | 附近的WiFi名称5 | 对应0x8003的键值0x5B05 |
-| 0x81A0 | 32字节 | 附近的WiFi名称6 | 对应0x8003的键值0x5B06 |
-| 0x81C0 | 32字节 | 附近的WiFi名称7 | 对应0x8003的键值0x5B07 |
-| 0x81E0 | 32字节 | 附近的WiFi名称8 | 对应0x8003的键值0x5B08 |
-| 0x8200 | 16字节 | 物联网平台选择 | 默认是串口云 |
-| 0x8210 | 32字节 | product\_auth | 认证信息产品授权码 |
-| 0x8230 | 32字节 | device\_sn | 认证信息设备序列号 |
+| 信号强度 | 0x8001 | 2字节 | 信号强度0~4 |
+| 接入平台提示 | 0x8002 | 2字节 | 0：掉线，1：已接入平台 |
+| IP地址 | 0x8003 | 18字节 | 文本，示例192.168.0.1 |
+| 在线时间 | 0x800D | 4字节 | 设备每次接入平台的时间 |
+| 激活状态 | 0x800F | 2字节 | 0：未注册，1：已注册，2：MQTT账号异常 |
 
-### 网络功能参数说明
+## 注册IoTgus终端
 
-#### 信号强度 0x8000
+| **功能模块** | **变量地址** | **长度** | **说明** |
+| :--- | :--- | :--- | :--- |
+| 接入平台 | 0x8010 | 32（字节） | 平台生成 |
+| device\_sn | 32（字节） | 出厂内置 |  |
 
-信号强度划分5个等级0~4，用于指示网络状态。可以配置变量图标来提示用户当前网络状况。
+## 查询模组信息
 
-#### 平台接入提示 0x8001
+| **功能模块** | 变量地址 | 长度 | 说明 |
+| :--- | :--- | :--- | :--- |
+| 模块型号 | 0x8050 | 12（字节） |  |
+| 模块序列号 | 0x8056 | 20（字节） | IMEI、WiFi使用Mac地址计算出来的码 15~17个数字 |
+| 模块软件版本 | 0x8060 | 6（字节） | 数值类型 |
+| 接入平台 | 0x8063 | 2（字节） | 1：接入uartcloud |
 
-> 0：未接入云平台，1：已接入云平台。
+## WiFi配置相关
 
-用于通知用户设备接入情况。可通过配置变量图标来通知接入状态
+### WiFi配网
 
-#### 搜索选择WiFi热点 0x8003
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>&#x529F;&#x80FD;&#x6A21;&#x5757;</b>
+      </th>
+      <th style="text-align:left">&#x53D8;&#x91CF;&#x5730;&#x5740;</th>
+      <th style="text-align:left"><b>&#x53D8;&#x91CF;&#x5730;&#x5740;</b>
+      </th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p></p>
+        <p>&#x5F85;&#x63A5;&#x5165;/&#x8BBE;&#x7F6E;AP SSID</p>
+      </td>
+      <td style="text-align:left">0x8090</td>
+      <td style="text-align:left">32&#x5B57;&#x8282;</td>
+      <td style="text-align:left">
+        <p>&#x5F53;&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x4E3A;station&#x65F6;&#xFF0C;&#x4E3A;&#x5F85;&#x63A5;&#x5165;&#x7684;ssid</p>
+        <p>&#x5F53;&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x4E3A;ap&#x65F6;&#xFF0C;&#x4E3A;&#x5F85;&#x8BBE;&#x7F6E;&#x7684;&#x70ED;&#x70B9;ssid</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&#x5F85;&#x63A5;&#x5165;/&#x8BBE;&#x7F6E;AP PSW</td>
+      <td style="text-align:left">0x80A0</td>
+      <td style="text-align:left">32&#xFF08;&#x5B57;&#x8282;&#xFF09;</td>
+      <td style="text-align:left">
+        <p>&#x5F53;&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x4E3A;station&#x65F6;&#xFF0C;&#x4E3A;&#x5F85;&#x63A5;&#x5165;&#x7684;password</p>
+        <p>&#x5F53;&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x4E3A;ap&#x65F6;&#xFF0C;&#x4E3A;&#x5F85;&#x8BBE;&#x7F6E;&#x7684;&#x70ED;&#x70B9;password</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>rssi1&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</b>
+      </td>
+      <td style="text-align:left"><b>0x80B0</b>
+      </td>
+      <td style="text-align:left"><b>2&#xFF08;&#x5B57;&#x8282;&#xFF09;</b>
+      </td>
+      <td style="text-align:left"><b>&#x641C;&#x7D22;&#x5230;&#x7684;ssid1</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>SSID1</b>
+      </td>
+      <td style="text-align:left"><b>0x80B1</b>
+      </td>
+      <td style="text-align:left"><b>30&#xFF08;&#x5B57;&#x8282;&#xFF09;</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&#x2026;&#x2026;</td>
+      <td style="text-align:left">&#x2026;&#x2026;</td>
+      <td style="text-align:left">&#x2026;&#x2026;</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>SSID8&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</b>
+      </td>
+      <td style="text-align:left"><b>0x8120</b>
+      </td>
+      <td style="text-align:left"><b>2&#xFF08;&#x5B57;&#x8282;&#xFF09;</b>
+      </td>
+      <td style="text-align:left"><b>&#x641C;&#x7D22;&#x5230;&#x7684;ssid8</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>SSID8</b>
+      </td>
+      <td style="text-align:left"><b>0x8121</b>
+      </td>
+      <td style="text-align:left"><b>30&#xFF08;&#x5B57;&#x8282;&#xFF09;</b>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">&#x914D;&#x7F51;&#x65B9;&#x5F0F;&#x9009;&#x62E9;</td>
+      <td style="text-align:left">0x8130</td>
+      <td style="text-align:left">2&#xFF08;&#x5B57;&#x8282;&#xFF09;</td>
+      <td style="text-align:left">0:station&#x3001;1:smartconfig&#x3001;2:airkiss&#x3001;3:ap</td>
+    </tr>
+  </tbody>
+</table>
 
-需要搜索附近WiFi热点，给变量地址0x8003写入0x5A02，即可使能IoT串口屏搜索WiFi热点显示到0x8100~0x81E0地址。最多可以显示8个WiFi热点，如果显示结果中没有想要的WiFi热点，可以再次写入0x5A02让IoT串口屏重新搜索附近WiFi热点，直到有自己想要的WiFi热点。可以配置**按键值返回**实现。
+### **查询WiFi状态**
 
-选择搜索到的WiFi热点，给变量地址0x8003写入0x5B01~0x5B08，分别对应8个附近的WiFi热点。可配置按键值返回实现。
+| **功能模块** | 变量地址 | **变量地址** | **长度** |
+| :--- | :--- | :--- | :--- |
+| ssid | 0x8140 | 32（字节） | 当前接入的ssid |
+| mode | 0x8150 | 2（字节） | WiFi当配网方式为station时， |
+| mac | 0x8151 | 14（字节） | Mac地址 |
+| ip | 0x8159 | 18（字节） |  |
+| mask | 0x8162 | 18（字节） |  |
+| gateway | 0x816B | 18（字节） |  |
 
-#### 输入WiFi名称 0x8010
+#### 2.2.6 4G配置相关 <a id="MtS00"></a>
 
-输入WiFi名称和选择的WiFi名称也是显示到这里。配置文本显示
+后续更新
 
-#### 输入WiFi密码 0x8030
+## 端云数据通信
 
-输入WiFi密码，用ascii文本录入
+### 文件传输
 
-#### 附近的WiFi名称 0x8100~0x81E0
+| **功能模块** | **功能参数** | **变量地址** | **长度** | **说明** |
+| :--- | :--- | :--- | :--- | :--- |
+| 配置更新状态 | 配置类型 | 0x81B0 | 2（字节） | 未启用 |
+| 配置文件名 | 0x81B1 | 30（字节） | 如22.bin |  |
+| 文件大小  | 0x81C0 | 4（字节） |  |  |
+| 版本 | 0x81C2 | 6（字节） |  |  |
 
-对应的配置文本显示，最多8个
+### 数据点通信
 
-#### 物联网平台选择 0x8020
 
-IoT串口屏可以多平台接入，目前已经实现了自有平台串口云的接入、阿里云平台接入，未来还有更多平台接入。可以通过单片机发给IoT串口屏，也可以直接在22.bin文件初始化。
-
-> 1：接入阿里云
-
-#### 认证信息三要素
-
-阿里云目前支持一机一密方式，需要使用三要素来接入；串口云支持一型一密的方式，使用ProductKey和DeviceSN 
-
-ProductKey写入到变量地址0x8210，DeviceName/SN 写入到变量地址0x8230，DeviceSecret 写入到变量地址0x8250；可以通过单片机发给IoT串口屏，也可以直接在22.bin文件初始化。
 
