@@ -2,11 +2,11 @@
 
 ### 3.1、曲线显示【0x20】
 
-
+![&#x66F2;&#x7EBF;&#x663E;&#x793A;](../../../../.gitbook/assets/qu-xian-xian-shi-.png)
 
 ### 3.2、基本图形显示【0x21】
 
-![](../../../../.gitbook/assets/image%20%28171%29.png)
+![&#x57FA;&#x672C;&#x56FE;&#x5F62;](../../../../.gitbook/assets/ji-ben-tu-xing-.png)
 
 基本图形显示先在14.bin 中定义一个“绘图板”功能，而具体的绘图操作则由\*VP 指向的变量空间内的内容决 定。用户通过发送不同的数据帧来实现不同的绘图功能。
 
@@ -26,11 +26,7 @@
 
 ### 3.3、列表显示【0x22】
 
-![](../../../../.gitbook/assets/image%20%2831%29.png)
-
-![](../../../../.gitbook/assets/image%20%28176%29.png)
-
-![](../../../../.gitbook/assets/image%20%2848%29.png)
+![&#x5217;&#x8868;&#x663E;&#x793A;](../../../../.gitbook/assets/lie-biao-xian-shi-.png)
 
 当Encode\_Mode 的第6 位为”1”时，每个单元格数据内容的前两个字定义了表格数据格式，具体定义如下：
 
@@ -40,7 +36,9 @@
 
 ### 3.4、二维码显示【0x25】
 
-![](../../../../.gitbook/assets/image%20%28151%29.png)
+![&#x4E8C;&#x7EF4;&#x7801;&#x663E;&#x793A;](../../../../.gitbook/assets/er-wei-ma-%20%281%29.png)
+
+
 
 ![](../../../../.gitbook/assets/image%20%28129%29.png)
 
