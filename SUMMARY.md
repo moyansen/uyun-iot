@@ -28,9 +28,7 @@
 
 ## 智能模块 <a id="uartlink"></a>
 
-* [智能模块产品介绍](uartlink/introduce/README.md)
-  * [4G网络模块](uartlink/introduce/4g.md)
-  * [WiFi网络模块](uartlink/introduce/wifi.md)
+* [智能模块产品介绍](uartlink/introduce.md)
 * [UartLink用户指南](uartlink/uartlink.md)
 
 ## 云平台 <a id="platform"></a>
