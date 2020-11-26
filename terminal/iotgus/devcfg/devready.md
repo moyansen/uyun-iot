@@ -6,7 +6,7 @@
 
 硬件环境的搭建，需要用到PC电脑、USB转串口调试板、IoTgus屏。
 
-![](../../.gitbook/assets/image%20%28135%29.png)
+![](../../../.gitbook/assets/image%20%28135%29.png)
 
 PC电脑：推荐使用Windows 7操作系统。  
 USB转串口调试板：USB转串口调试板与支持RS-232与TTL电平与IoTgus屏功能通信，同时给屏供电。
@@ -17,34 +17,34 @@ USB转串口调试板：USB转串口调试板与支持RS-232与TTL电平与IoTgu
 
 **串口调试工具：**用于调试模拟上位机与IoTgus屏通信，推荐使用sscom5.13.1；
 
-{% file src="../../.gitbook/assets/sscom5.13.1.rar" %}
+{% file src="../../../.gitbook/assets/sscom5.13.1.rar" %}
 
   
 **IoTgus配置工具：**用具开发配置IoTgus屏的功能，配置系统参数（config.TXT文件）、14变量配置文件、13触控配置文件、22初始化文件。这是用于完成IoTgus屏最最主要的功能，也是最基本的工作。
 
-{% file src="../../.gitbook/assets/jx1.2.rar" %}
+{% file src="../../../.gitbook/assets/jx1.2.rar" %}
 
 ### IoTgus配置工具介绍
 
 下载IoTgus配置工具，如下所示：
 
-![](../../.gitbook/assets/image%20%28161%29.png)
+![](../../../.gitbook/assets/image%20%28161%29.png)
 
 #### 启动工具
 
 工具运行依赖 **.net3.5** 以上。双击上图中的“**JX.exe**"文件，启动配置工具如下所示：
 
-![](../../.gitbook/assets/image%20%28101%29.png)
+![](../../../.gitbook/assets/image%20%28101%29.png)
 
 #### 新建工程
 
 新建工程需要特别注意选择与IoTgus屏一直的分辨率，操作如下演示如下
 
-![](../../.gitbook/assets/01-xin-jian-gong-cheng-.gif)
+![](../../../.gitbook/assets/01-xin-jian-gong-cheng-.gif)
 
 新建完成后，会产生如下图所示的目录和文件：
 
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../../.gitbook/assets/image%20%2886%29.png)
 
 * **DD\_SET**：所有需要下载到IoTgus屏的文件，到存放次目录
 * **ICON**：存放icon文件
@@ -57,23 +57,23 @@ USB转串口调试板：USB转串口调试板与支持RS-232与TTL电平与IoTgu
 
 新建工程后，把准备好的图片导入到工程项目中，图片素材作为背景图，格式严格要求bmp、24bit色，分辨率与IoTgus屏一直，操作如下所示
 
-![](../../.gitbook/assets/02-dao-ru-tu-pian-.gif)
+![](../../../.gitbook/assets/02-dao-ru-tu-pian-.gif)
 
 #### 系统配置
 
 根据系统配置说明，进行如下图所示的配置，波特率115200、帧头5AA5、R2配置为08、选择电容屏、开机启动校准，然后并输出配置文件（config.txt）
 
-![](../../.gitbook/assets/03-xi-tong-pei-zhi-.gif)
+![](../../../.gitbook/assets/03-xi-tong-pei-zhi-.gif)
 
 #### 保存工程
 
 配置基本配置完成后，保存工程，并点击生成。
 
-![](../../.gitbook/assets/04-bao-cun-gong-cheng-%20%281%29.gif)
+![](../../../.gitbook/assets/04-bao-cun-gong-cheng-%20%281%29.gif)
 
 经过以上的几个步骤，工程已经建立完成，打开工程目录下的文件夹DD\_SET，根据需要添加字库文件、图标库文件等。
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../../.gitbook/assets/image%20%28108%29.png)
 
 #### 导入工程
 
@@ -98,7 +98,7 @@ USB转串口调试板：USB转串口调试板与支持RS-232与TTL电平与IoTgu
 4. 重新给终端上电，IoTgus屏将自动加载DD\_SET 文件夹中的内容，并保存到终端设备；
 5. 等到蜂鸣器鸣叫一声之后，更新完成，用户可以拔出SD卡，重新上电之后进入正常工作模式。
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../../.gitbook/assets/image%20%2874%29.png)
 
 ### 触摸屏校准
 
@@ -106,9 +106,9 @@ USB转串口调试板：USB转串口调试板与支持RS-232与TTL电平与IoTgu
 
 在创建工程在配置是，勾选了“启动时执行触摸校准”功能在CONFIG.TXT 文件中写入“TP\_CORRECT”命令，IoTgus屏将在下载完成文件后，将进入一次触摸屏校准过程。IoTgus屏会自动检验校准是否有效，如果无效校准，IoTgus屏不会被错误的设置。
 
-![](../../.gitbook/assets/image.png)
+![](../../../.gitbook/assets/image.png)
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../../.gitbook/assets/image%20%2855%29.png)
 
 #### **方法二：**
 

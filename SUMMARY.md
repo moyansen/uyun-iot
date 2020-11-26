@@ -6,20 +6,21 @@
 
 ## 智能屏 <a id="terminal"></a>
 
-* [产品介绍](terminal/introduce.md)
+* [智能屏产品介绍](terminal/introduce.md)
 * [IoTgus用户指南](terminal/iotgus/README.md)
   * [串口通信说明](terminal/iotgus/uart.md)
   * [系统配置说明](terminal/iotgus/syscfg.md)
   * [寄存器说明](terminal/iotgus/regvar/README.md)
     * [寄存器功能描述](terminal/iotgus/regvar/register.md)
-  * [开发准备说明](terminal/iotgus/devready.md)
   * [开发配置说明](terminal/iotgus/devcfg/README.md)
+    * [开发准备说明](terminal/iotgus/devcfg/devready.md)
     * [显示控件说明](terminal/iotgus/devcfg/uartosdisplay/README.md)
       * [文本显示功能](terminal/iotgus/devcfg/uartosdisplay/text.md)
       * [图标显示功能](terminal/iotgus/devcfg/uartosdisplay/icon.md)
       * [图形显示功能](terminal/iotgus/devcfg/uartosdisplay/graph.md)
     * [触控控件说明](terminal/iotgus/devcfg/uartostouch.md)
     * [网络配置说明](terminal/iotgus/devcfg/netconfig.md)
+  * [示例教程](terminal/iotgus/shi-li-jiao-cheng.md)
   * [附录](terminal/iotgus/uartosacc.md)
 * [柿饼派用户指南](terminal/persimmonui.md)
 * [Linux屏用户指南](terminal/linux.md)
@@ -27,24 +28,25 @@
 
 ## 智能模块 <a id="uartlink"></a>
 
-* [产品介绍](uartlink/introduce.md)
-* [UartLink用户指南](uartlink/uartlink/README.md)
-  * [4G网络模块](uartlink/uartlink/4g.md)
-  * [WiFi网络模块](uartlink/uartlink/wifi.md)
+* [智能模块产品介绍](uartlink/introduce/README.md)
+  * [4G网络模块](uartlink/introduce/4g.md)
+  * [WiFi网络模块](uartlink/introduce/wifi.md)
+* [UartLink用户指南](uartlink/uartlink.md)
 
 ## 云平台 <a id="platform"></a>
 
-* [UartCloud产品介绍](platform/introduce.md)
-* [快速入门](platform/quickguide.md)
-* [控制台用户指南](platform/consoleguide/README.md)
-  * [终端管理](platform/consoleguide/terminal.md)
-  * [设备管理](platform/consoleguide/device.md)
-  * [数据管理](platform/consoleguide/data.md)
-  * [应用管理](platform/consoleguide/application.md)
+* [UartCloud IoT平台介绍](platform/introduce.md)
+* [快速入门](platform/quickguide/README.md)
+  * [申请串口云账号](platform/quickguide/shen-qing-chuan-kou-yun-zhang-hao.md)
+  * [添加终端](platform/quickguide/terminal.md)
+  * [创建新产品](platform/quickguide/product.md)
+  * [添加数据点](platform/quickguide/datapoint.md)
+  * [设备管理](platform/quickguide/device.md)
+  * [数据管理](platform/quickguide/data.md)
 * [设备开发指南](platform/devicedev.md)
-* [云端对接指南](platform/clouddev.md)
+* [第三方应用对接指南](platform/clouddev.md)
 
-## 应用可视化开发平台 <a id="visualboard"></a>
+## 应用开发平台 <a id="visualboard"></a>
 
-* [产品介绍](visualboard/introduce.md)
+* [VisualBoard产品介绍](visualboard/introduce.md)
 
