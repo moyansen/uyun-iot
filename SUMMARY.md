@@ -47,7 +47,7 @@
 * [设备开发指南](platform/devicedev.md)
 * [第三方应用对接指南](platform/clouddev.md)
 
-## 应用开发平台 <a id="visualboard"></a>
+## 应用平台 <a id="visualboard"></a>
 
 * [VisualBoard产品介绍](visualboard/introduce.md)
 
