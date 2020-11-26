@@ -22,7 +22,6 @@
     * [网络配置说明](terminal/iotgus/devcfg/netconfig.md)
   * [附录](terminal/iotgus/uartosacc.md)
 * [柿饼派用户指南](terminal/persimmonui.md)
-* [UartOS用户指南](terminal/uartos.md)
 * [Linux屏用户指南](terminal/linux.md)
 * [Android屏用户指南](terminal/android.md)
 
@@ -33,7 +32,7 @@
   * [4G网络模块](uartlink/uartlink/4g.md)
   * [WiFi网络模块](uartlink/uartlink/wifi.md)
 
-## 物联云平台 <a id="platform"></a>
+## 云平台 <a id="platform"></a>
 
 * [UartCloud产品介绍](platform/introduce.md)
 * [快速入门](platform/quickguide.md)
