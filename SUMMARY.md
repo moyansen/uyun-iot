@@ -36,7 +36,7 @@
 * [UartCloud IoT平台介绍](platform/introduce.md)
 * [快速入门](platform/quickguide/README.md)
   * [申请平台账号](platform/quickguide/shen-qing-chuan-kou-yun-zhang-hao.md)
-  * [添加终端](platform/quickguide/terminal.md)
+  * [添加智能终端](platform/quickguide/terminal.md)
   * [创建新产品](platform/quickguide/product.md)
   * [添加数据点](platform/quickguide/datapoint.md)
   * [设备管理](platform/quickguide/device.md)
