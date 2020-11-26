@@ -43,6 +43,7 @@
   * [添加数据点](platform/quickguide/datapoint.md)
   * [设备管理](platform/quickguide/device.md)
   * [数据管理](platform/quickguide/data.md)
+  * [应用管理](platform/quickguide/application.md)
 * [设备开发指南](platform/devicedev.md)
 * [第三方应用对接指南](platform/clouddev.md)
 
