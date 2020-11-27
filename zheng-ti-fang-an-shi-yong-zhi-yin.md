@@ -102,7 +102,9 @@
 
 ![](.gitbook/assets/fu-dian-xing-shu-zhi-gong-neng-dian-.png)
 
-依次类推
+依次类推，把其他的功能点配置完成
 
+### 2.3 创建产品
 
+如果已有产品，可以不用创建，找到产品授权码product\_auth。
 
