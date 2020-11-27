@@ -4,7 +4,7 @@
 
 异步调用交互流程图如下所示
 
-{% api-method method="post" host="/iot/v1/application/device/rpc/async" path="" %}
+{% api-method method="post" host="" path="/iot/v1/application/device/rpc/async" %}
 {% api-method-summary %}
 异步调用api 
 {% endapi-method-summary %}

@@ -41,7 +41,7 @@
 }
 ```
 
-{% api-method method="post" host="https://api.example.com/iot/v1/callback" path="" %}
+{% api-method method="post" host="https://api.example.com" path="/iot/v1/callback" %}
 {% api-method-summary %}
  回调接口示例
 {% endapi-method-summary %}

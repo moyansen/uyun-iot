@@ -45,7 +45,9 @@
   * [远程调用](platform/clouddev/yuan-cheng-tiao-yong.md)
   * [数据服务](platform/clouddev/shu-ju-fu-wu/README.md)
     * [数据推送](platform/clouddev/shu-ju-fu-wu/shu-ju-tui-song.md)
-    * [数据调用](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong.md)
+    * [数据调用](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/README.md)
+      * [按功能点查询数据](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-dian-cha-xun-shu-ju.md)
+      * [按功能组查询数据](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-zu-cha-xun-shu-ju.md)
 
 ## 应用开发平台 <a id="visualboard"></a>
 
