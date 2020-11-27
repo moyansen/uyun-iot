@@ -52,7 +52,6 @@ uint16_t CRC16(uint16_t BraekPoint, uint8_t *Buffer, uint32_t Length)
     }
     return CRCValue;
 }
-
 ```
 
 当使能CRC 帧校验应答【即R2.4 为1 且RC.3 为1】时，AG 系列显示终端会在CRC 校验后自动应答校验情况， 返回信息如下表所示：
