@@ -43,6 +43,9 @@
 * [设备开发指南](platform/devicedev.md)
 * [第三方应用对接指南](platform/clouddev/README.md)
   * [远程调用](platform/clouddev/yuan-cheng-tiao-yong.md)
+  * [数据服务](platform/clouddev/shu-ju-fu-wu/README.md)
+    * [数据推送](platform/clouddev/shu-ju-fu-wu/shu-ju-tui-song.md)
+    * [数据调用](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong.md)
 
 ## 应用开发平台 <a id="visualboard"></a>
 
