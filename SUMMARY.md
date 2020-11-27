@@ -48,6 +48,7 @@
     * [数据调用](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/README.md)
       * [按功能点查询数据](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-dian-cha-xun-shu-ju.md)
       * [按功能组查询数据](platform/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-zu-cha-xun-shu-ju.md)
+  * [云云对接](platform/clouddev/yun-yun-dui-jie.md)
 
 ## 应用开发平台 <a id="visualboard"></a>
 
