@@ -23,8 +23,6 @@
   * [示例教程](terminal/iotgus/shi-li-jiao-cheng.md)
   * [附录](terminal/iotgus/uartosacc.md)
 * [柿饼派用户指南](terminal/persimmonui.md)
-* [Linux屏用户指南](terminal/linux.md)
-* [Android屏用户指南](terminal/android.md)
 
 ## 智能模块 <a id="uartlink"></a>
 
