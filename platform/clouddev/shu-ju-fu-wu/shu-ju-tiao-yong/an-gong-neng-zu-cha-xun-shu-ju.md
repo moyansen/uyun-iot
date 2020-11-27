@@ -29,7 +29,7 @@
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="minutes" type="integer" required=true %}
-The API do its best to find a cake matching the provided recipe.
+
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
