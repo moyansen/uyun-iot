@@ -3,7 +3,7 @@
 * [关于我们](README.md)
 * [返回官网](http://www.uyun-iot.cn)
 * [我们在招聘！](hire.md)
-* [整体方案使用指引](zheng-ti-fang-an-shi-yong-zhi-yin.md)
+* [整体方案开发指引](zheng-ti-fang-an-shi-yong-zhi-yin.md)
 
 ## 智能屏 <a id="terminal"></a>
 
