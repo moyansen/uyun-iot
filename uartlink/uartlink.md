@@ -106,7 +106,7 @@ IP地址：WiFi模块是局域网地址，4G模块是公网IP
 | 2字节 | 1字节 | 1字节 | 2字节 | 2字节 | 15字节 | 15字节 | 2字节 |
 | 5AA5 | 06 | 82 | 8020 |  |  |  |  |
 
-**配网方式：1-STA模式 2-SMART模式**
+配网方式：1-STA模式 2-SMART模式
 
 **模块返回信息**
 
@@ -135,48 +135,13 @@ IP地址：WiFi模块是局域网地址，4G模块是公网IP
 
 mcu与WiFi模块进行数据通信交互，通过gus指令协议进行数据交互。首先要在平台建立物模型，根据物模型生成的规则文件，WiFi模块对上行数据需要根据规则文件进行封装payload
 
-### 4.1 模块升级 <a id="FtkvB"></a>
+### 4.1 文件传输 <a id="wBWaL"></a>
 
-[https://www.yuque.com/docs/share/6c85e49f-43c2-44de-a97d-36a75b69ed88?\#](https://www.yuque.com/docs/share/6c85e49f-43c2-44de-a97d-36a75b69ed88?#) 《系统交互》
+待更新
 
-模块自身升级，数据模块系统升级。走系统主题通道
+### 4.2 数据点交互 <a id="SgGpH"></a>
 
-### 4.2 文件传输 <a id="wBWaL"></a>
-
-[https://www.yuque.com/docs/share/9c75b5b7-a4ac-4f80-94a1-e90cf41680dd?\#](https://www.yuque.com/docs/share/9c75b5b7-a4ac-4f80-94a1-e90cf41680dd?#) 《文件推送流程》
-
-文件传输，主要是把通道留给客户，客户可以通过我们模块实现文件传输，对客户的mcu进行升级
-
-### 4.3 规则文件说明 <a id="xtCDv"></a>
-
-#### 规则格式 <a id="XfzkY"></a>
-
-| **序号** | **起始变量地址** | **长度** | **功能组ID** | **方法** |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | 0010 | 4 | 48a05688144e | property.ack.gus.post |
-
-**方法说明**
-
-方法是由四部分构成：主题类型.南向命令.硬件协议.北向命令
-
-* 主题类型：模块根据主题类型确定需要发布的主题，用于数据通信的主题有property、service、event、raw
-* 南向命令：用于平台确认收到硬件上报数据是否需要确认。ack表示需要平台收到数据后确认回复，此时平台收到后原数据返回，ack变为ackok；noack表示不需要平台做确认。
-* 硬件协议：因为支持多协议，所以硬件上报的数据，平台根据模型配置的协议进行解析。协议支持json、gus
-* 北向命令：平台端根据北向命令转发数据。post表示数据解析后存到数据库；push表示数据解析后通过消息服务推送到第三方应用服务器；rpc表示数据处理之后通过http回调推送给第三方应用服务器。 
-
-#### 规则文件 <a id="Vv9px"></a>
-
-规则文件由平台生成，文件内容示例如下
-
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/113106/1605509772806-cd6a8c29-a576-4bc7-b4e5-4ae420ac60da.png)
-
-#### 规则文件拉取 <a id="LNMRL"></a>
-
-[https://www.yuque.com/docs/share/25d2d2a6-32a5-475c-99fa-b815b6384be7?\#](https://www.yuque.com/docs/share/25d2d2a6-32a5-475c-99fa-b815b6384be7?#) 《规则文件下拉》
-
-### 4.4 数据点交互 <a id="SgGpH"></a>
-
-#### 4.4.1 发布数据（0x0000~0x7FFF） <a id="sgL4u"></a>
+#### 4.2.1 发布数据（0x0000~0x7FFF） <a id="sgL4u"></a>
 
 变量地址范围0x0000~0x7FFF，用于数据通信，mcu发送数据到模块后，模块根据规则文件发布到平台。
 
@@ -191,28 +156,7 @@ mcu与WiFi模块进行数据通信交互，通过gus指令协议进行数据交�
 
 5AA5 07 82 1040 0000 0001
 
-根据规则文件转换后
-
-```text
-{
-    "method": "property.ack.gus.rpc",
-    "profile": {
-        "customer_uuid": "",
-        "product_uuid": "",
-        "device_uuid": ""
-    },
-    "datapoint": {
-        "cmd": "82",
-        "groupid": "42a05688144e",
-        "para": "5AA50782104000000001"
-    },
-    "version": "1.0.1",
-    "msgid": "K7WOIzYeeO0i",
-    "ts": 1605265855021
-}
-```
-
-#### 4.4.2 下发数据 <a id="oqt9h"></a>
+#### 4.2.2 下发数据 <a id="oqt9h"></a>
 
 模块接收到平台下发数据
 
@@ -220,47 +164,9 @@ mcu与WiFi模块进行数据通信交互，通过gus指令协议进行数据交�
 
 直接把para数据发送串口给设备端，如下所示5AA5 08 83 1040 02 0000 0001发送到串口给mcu
 
-```text
-{
-    "method": "property.ack.gus.rpc",
-    "profile": {
-        "customer_uuid": "",
-        "product_uuid": "",
-        "device_uuid": ""
-    },
-    "datapoint": {
-        "cmd": "83",
-        "groupid": "42a05688144e",
-        "para": "5AA5 08 83 1040 02 0000 0001"
-    },
-    "version": "1.0.1",
-    "msgid": "K7WOIzYeeO0i",
-    "ts": 1605265855021
-}
-```
-
 **\(2\)平台下发数据cmd为82时**
 
 数据写入模块的缓存中，按照变量地址缓存，并根据配置发送给mcu，后续mcu还可以过来读取
 
 把para数据发送串口给设备端，如下所示5AA5 08 83 1040 02 0000 0001发送到串口给mcu
-
-```text
-{
-    "method": "property.ack.gus.rpc",
-    "profile": {
-        "customer_uuid": "",
-        "product_uuid": "",
-        "device_uuid": ""
-    },
-    "datapoint": {
-        "cmd": "83",
-        "groupid": "42a05688144e",
-        "para": "5AA50782 1040 0000 0000"
-    },
-    "version": "1.0.1",
-    "msgid": "K7WOIzYeeO0i",
-    "ts": 1605265855021
-}
-```
 
