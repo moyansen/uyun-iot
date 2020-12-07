@@ -6,13 +6,16 @@
 
 ![](../../.gitbook/assets/image%20%28123%29.png)
 
+
+
 {% api-method method="post" host="" path="/iot/v1/application/device/rpc/async" %}
 {% api-method-summary %}
 异步调用api 
 {% endapi-method-summary %}
 
 {% api-method-description %}
-异步调用是指第三方服务通过异步调用接口，给设备下发命令，接口响应的结果并不是设备返回的结果，而设备上报的结果需要通过另外的方式（如数据推送、消息推送、数据调用）获得设备被调用之后的结果。
+异步调用是指第三方服务通过异步调用接口，给设备下发命令，接口响应的结果并不是设备返回的结果，而设备上报的结果需要通过另外的方式（如数据推送、消息推送、数据调用）获得设备被调用之后的结果。  
+交互流程：
 {% endapi-method-description %}
 
 {% api-method-spec %}
