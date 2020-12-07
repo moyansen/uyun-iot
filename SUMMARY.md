@@ -22,7 +22,7 @@
     * [触控控件说明](uartlcd/iotgus/devcfg/uartostouch.md)
     * [网络配置说明](uartlcd/iotgus/devcfg/netconfig.md)
   * [附录](uartlcd/iotgus/uartosacc.md)
-* [柿饼派用户指南](uartlcd/persimmonui.md)
+* [串口柿饼派用户指南](uartlcd/uartpersimmonui.md)
 
 ## 智能模块 <a id="uartlink"></a>
 
@@ -31,7 +31,7 @@
 
 ## 云平台 <a id="uartcloud"></a>
 
-* [UartCloud IoT平台介绍](uartcloud/introduce.md)
+* [串口云IoT平台介绍](uartcloud/introduce.md)
 * [快速入门](uartcloud/quickguide/README.md)
   * [申请平台账号](uartcloud/quickguide/shen-qing-chuan-kou-yun-zhang-hao.md)
   * [添加智能终端](uartcloud/quickguide/terminal.md)
