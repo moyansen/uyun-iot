@@ -22,7 +22,7 @@
     * [触控控件说明](uartlcd/iotgus/devcfg/uartostouch.md)
     * [网络配置说明](uartlcd/iotgus/devcfg/netconfig.md)
   * [附录](uartlcd/iotgus/uartosacc.md)
-* [串口柿饼派用户指南](uartlcd/uartpersimmonui.md)
+* [串口柿饼UI用户指南](uartlcd/uartpersimmonui.md)
 
 ## 智能模块 <a id="uartlink"></a>
 
