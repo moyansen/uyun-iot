@@ -35,7 +35,7 @@
   * [设备管理](uartcloud/quickguide/device.md)
   * [数据管理](uartcloud/quickguide/data.md)
   * [应用管理](uartcloud/quickguide/application.md)
-* [设备开发指南](uartcloud/devicedev.md)
+* [设备接入指南](uartcloud/devicedev.md)
 * [第三方应用对接指南](uartcloud/clouddev/README.md)
   * [远程调用](uartcloud/clouddev/yuan-cheng-tiao-yong.md)
   * [数据服务](uartcloud/clouddev/shu-ju-fu-wu/README.md)
