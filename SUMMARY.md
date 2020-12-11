@@ -26,7 +26,7 @@
 
 ## 物联网云平台 <a id="uartcloud"></a>
 
-* [串口云IoT平台介绍](uartcloud/introduce.md)
+* [物联网平台介绍](uartcloud/introduce.md)
 * [快速入门](uartcloud/quickguide/README.md)
   * [申请平台账号](uartcloud/quickguide/shen-qing-chuan-kou-yun-zhang-hao.md)
   * [添加智能终端](uartcloud/quickguide/terminal.md)
