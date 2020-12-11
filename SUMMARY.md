@@ -45,13 +45,13 @@
       * [按功能组查询数据](uartcloud/clouddev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-zu-cha-xun-shu-ju.md)
   * [云云对接](uartcloud/clouddev/yun-yun-dui-jie.md)
 
-## 智能屏
+## 智能屏 <a id="smartlcd"></a>
 
-* [普通型串口屏产品手册](zhi-neng-ping/uartlcd.md)
-* [物联型串口屏产品手册](zhi-neng-ping/iotuartlcd.md)
-* [柿饼UI串口屏产品手册](zhi-neng-ping/uartpersimmonlcd.md)
-* [Linux智能屏产品手册](zhi-neng-ping/linux.md)
-* [Android屏产品手册](zhi-neng-ping/android.md)
+* [普通型串口屏产品手册](smartlcd/uartlcd.md)
+* [物联型串口屏产品手册](smartlcd/iotuartlcd.md)
+* [柿饼UI串口屏产品手册](smartlcd/uartpersimmonlcd.md)
+* [Linux智能屏产品手册](smartlcd/linux.md)
+* [Android屏产品手册](smartlcd/android.md)
 
 ## 智能模块 <a id="uartlink"></a>
 
