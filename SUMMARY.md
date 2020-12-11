@@ -38,11 +38,11 @@
 * [设备接入指南](uartcloud/devicedev.md)
 * [客户应用对接指南](uartcloud/appdev/README.md)
   * [远程调用](uartcloud/appdev/yuan-cheng-tiao-yong.md)
-  * [数据服务](uartcloud/appdev/shu-ju-fu-wu/README.md)
-    * [数据推送](uartcloud/appdev/shu-ju-fu-wu/shu-ju-tui-song.md)
-    * [数据调用](uartcloud/appdev/shu-ju-fu-wu/shu-ju-tiao-yong/README.md)
-      * [按功能点查询数据](uartcloud/appdev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-dian-cha-xun-shu-ju.md)
-      * [按功能组查询数据](uartcloud/appdev/shu-ju-fu-wu/shu-ju-tiao-yong/an-gong-neng-zu-cha-xun-shu-ju.md)
+  * [数据服务](uartcloud/appdev/dataservice/README.md)
+    * [数据推送](uartcloud/appdev/dataservice/shu-ju-tui-song.md)
+    * [数据调用](uartcloud/appdev/dataservice/shu-ju-tiao-yong/README.md)
+      * [按功能点查询数据](uartcloud/appdev/dataservice/shu-ju-tiao-yong/an-gong-neng-dian-cha-xun-shu-ju.md)
+      * [按功能组查询数据](uartcloud/appdev/dataservice/shu-ju-tiao-yong/an-gong-neng-zu-cha-xun-shu-ju.md)
   * [云云对接](uartcloud/appdev/yun-yun-dui-jie.md)
 
 ## 智能屏 <a id="smartlcd"></a>
