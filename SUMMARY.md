@@ -26,7 +26,7 @@
 
 ## 物联网云平台 <a id="uartcloud"></a>
 
-* [物联网平台介绍](uartcloud/introduce.md)
+* [云平台介绍](uartcloud/introduce.md)
 * [快速入门](uartcloud/quickguide/README.md)
   * [申请平台账号](uartcloud/quickguide/shen-qing-chuan-kou-yun-zhang-hao.md)
   * [添加智能终端](uartcloud/quickguide/terminal.md)
@@ -36,7 +36,7 @@
   * [数据管理](uartcloud/quickguide/data.md)
   * [应用管理](uartcloud/quickguide/application.md)
 * [设备接入指南](uartcloud/devicedev.md)
-* [第三方应用对接指南](uartcloud/appdev/README.md)
+* [客户应用对接指南](uartcloud/appdev/README.md)
   * [远程调用](uartcloud/appdev/yuan-cheng-tiao-yong.md)
   * [数据服务](uartcloud/appdev/shu-ju-fu-wu/README.md)
     * [数据推送](uartcloud/appdev/shu-ju-fu-wu/shu-ju-tui-song.md)
