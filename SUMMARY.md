@@ -53,8 +53,8 @@
 * [Linux智能屏产品手册](smartlcd/linux.md)
 * [Android屏产品手册](smartlcd/android.md)
 
-## 智能模块 <a id="uartlink"></a>
+## 智能模块 <a id="smartmodule"></a>
 
-* [WiFi系列模块产品手册](uartlink/wifi.md)
-* [4G系列产品手册](uartlink/4g.md)
+* [WiFi系列模块产品手册](smartmodule/wifi.md)
+* [4G系列产品手册](smartmodule/4g.md)
 
