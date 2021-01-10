@@ -10,7 +10,7 @@
 
 {% api-method method="post" host="" path="/iot/v1/application/device/rpc/async" %}
 {% api-method-summary %}
-异步调用api 
+新版 异步调用api 
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -39,16 +39,12 @@
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="cmd" type="string" required=true %}
-如果para参数是GUS协议格式数据，cmd只能选择82/83；如果para参数是json格式数据，cmd可以根据自己情况而定
+{% api-method-parameter name="datapoint" type="string" required=true %}
+ 根据功能点而定
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="groupid" type="string" required=true %}
-根据模型的功能组而定
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="para" type="object" required=true %}
-根据模型的功能点而定
+{% api-method-parameter name="method" type="string" required=true %}
+ 根据模型而定，可查看规则文件
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -76,7 +72,45 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="" path="/iot/v1/application/device/send/property/object" %}
+{% api-method-summary %}
+ 老版异步调用api
+{% endapi-method-summary %}
 
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="apikey" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="product\_uuid" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="deivce\_uuid" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ###  <a id="ern7M"></a>
 
