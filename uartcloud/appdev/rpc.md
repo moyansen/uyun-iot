@@ -10,7 +10,7 @@
 
 {% api-method method="post" host="" path="/iot/v1/application/device/rpc/async" %}
 {% api-method-summary %}
-新版 异步调用api 
+新版异步调用api 
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -72,7 +72,7 @@
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/iot/v1/application/device/send/property/object" %}
+{% api-method method="post" host="" path="/iot/v1/application/device/send/property/object" %}
 {% api-method-summary %}
  老版异步调用api
 {% endapi-method-summary %}
@@ -96,6 +96,16 @@
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="cmd" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="msgid" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
