@@ -21,10 +21,6 @@
 {% api-method-parameter name="device\_sn" type="string" required=true %}
 device\_sn和device\_uuid二选一，查询多个可以用英文状态下的“,”隔开
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="device\_uuid" type="string" required=true %}
-device\_sn和device\_uuid二选一，查询多个可以英文状态下的“,”隔开
-{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
