@@ -36,7 +36,7 @@
   * [数据管理](uartcloud/quickguide/data.md)
   * [应用管理](uartcloud/quickguide/application.md)
 * [设备接入指南](uartcloud/devicedev.md)
-* [客户应用对接指南](uartcloud/appdev/README.md)
+* [应用对接指南](uartcloud/appdev/README.md)
   * [远程调用](uartcloud/appdev/rpc.md)
   * [数据服务](uartcloud/appdev/dataservice/README.md)
     * [数据推送](uartcloud/appdev/dataservice/datapush.md)
