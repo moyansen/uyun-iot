@@ -21,8 +21,8 @@
     * [触控控件说明](hmiplatform/agus/devcfg/uartostouch.md)
     * [网络配置说明](hmiplatform/agus/devcfg/netconfig.md)
   * [附录](hmiplatform/agus/uartosacc.md)
-* [串口柿饼UI用户开发指南](hmiplatform/uartpersimmonui.md)
-* [UartLink用户开发指南](hmiplatform/uartlink.md)
+* [串口柿饼UI应用开发指南](hmiplatform/uartpersimmonui.md)
+* [UartLink应用开发指南](hmiplatform/uartlink.md)
 
 ## 物联网云平台 <a id="uartcloud"></a>
 
