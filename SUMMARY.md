@@ -47,14 +47,14 @@
 
 ## 智能屏 <a id="smartlcd"></a>
 
-* [普通型串口屏产品手册](smartlcd/uartlcd.md)
-* [物联型串口屏产品手册](smartlcd/iotuartlcd.md)
+* [AC系列智能屏用户手册](smartlcd/ac.md)
+* [AI系列智能屏用户手册](smartlcd/ai.md)
 * [柿饼UI串口屏产品手册](smartlcd/uartpersimmonlcd.md)
 * [Linux智能屏产品手册](smartlcd/linux.md)
 * [Android屏产品手册](smartlcd/android.md)
 
 ## 智能模块 <a id="smartmodule"></a>
 
-* [WiFi系列模块产品手册](smartmodule/wifi.md)
-* [4G系列产品手册](smartmodule/4g.md)
+* [UW100A系列WiFi模块用户手册](smartmodule/uw100a.md)
+* [UM400A系列4G模块用户手册](smartmodule/um400a.md)
 
